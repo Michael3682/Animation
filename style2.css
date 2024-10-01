@@ -1,0 +1,134 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-size: 5rem;
+}
+
+.view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: max-content;
+    gap: 5rem;
+    padding: 2rem;
+    grid-template-areas:
+        "block-1 block-2 block-3"
+        "block-4 block-4 block-5"
+        "block-6 block-7 ."
+        "block-8 block-8 block-9"
+        "block-10 block-10 block-11"
+        "block-12 block-13 block-14"
+        "block-15 block-16 block-16";
+}
+
+.block {
+    border: 5px solid rgb(77, 76, 76);
+    box-shadow: 0 0 10px 0 rgb(116, 114, 114);
+    height: 200px;
+    background-color: antiquewhite;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 25%;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: .5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block:nth-child(1) {
+    background-color: hsl(0, 82%, 62%);
+    grid-area: block-1;
+}
+
+.block:nth-child(2) {
+    background-color: hsl(39, 82%, 62%);
+    grid-area: block-2;
+}
+
+.block:nth-child(3) {
+    background-color: hsl(28, 82%, 62%);
+    grid-area: block-3;
+}
+
+.block:nth-child(4) {
+    background-color: hsl(50, 82%, 62%);
+    grid-area: block-4;
+}
+
+.block:nth-child(5) {
+    background-color: hsl(100, 82%, 62%);
+    grid-area: block-5;
+}
+
+.block:nth-child(6) {
+    background-color: hsl(138, 82%, 62%);
+    grid-area: block-6;
+}
+
+.block:nth-child(7) {
+    background-color: hsl(226, 82%, 62%);
+    grid-area: block-7;
+}
+
+.block:nth-child(8) {
+    background-color: hsl(182, 82%, 62%);
+    grid-area: block-8;
+}
+
+.block:nth-child(9) {
+    background-color: hsl(0, 52%, 42%);
+    grid-area: block-9;
+}
+
+.block:nth-child(10) {
+    background-color: hsl(278, 82%, 62%);
+    grid-area: block-10;
+}
+
+.block:nth-child(11) {
+    background-color: hsl(308, 82%, 62%);
+    grid-area: block-11;
+}
+
+.block:nth-child(12) {
+    background-color: hsl(125, 82%, 62%);
+    grid-area: block-12;
+}
+
+.block:nth-child(13) {
+    background-color: hsl(91, 45%, 44%);
+    grid-area: block-13;
+}
+
+.block:nth-child(14) {
+    background-color: hsl(184, 91%, 68%);
+    grid-area: block-14;
+}
+
+.block:nth-child(15) {
+    background-color: hsl(273, 84%, 42%);
+    grid-area: block-15;
+}
+
+.block:nth-child(16) {
+    background-color: hsl(244, 89%, 50%);
+    grid-area: block-16;
+}
